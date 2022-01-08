@@ -18,7 +18,7 @@ const margin = {
 // Bloque 1: declarar el svg (const svg y elementGroup (1 append g, id, elementGroup - luego transform y translate))
 const svg = d3.select("#chart").append("svg").attr('id', "svg").attr("width", width).attr("height", height)
 const elementGroup = svg.append("g").attr('id', "elementGroup")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`)
+  .attr("transform", `translate(${margin.left + 10}, ${margin.top})`)
 
 // definir escala (x = edad chicas (scaleBand), y = edad DC (scaleLinear) (el dominio es la edad > 
 // y es la que marca el límite superior de los datos; eje y = 0 hasta edad DC))
@@ -63,6 +63,7 @@ bars.enter().append("rect")
 
 // console.log(datos2)
 })
+
 
 
 
